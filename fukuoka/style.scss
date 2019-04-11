@@ -1,0 +1,347 @@
+@charset "UTF-8";
+
+//設定
+$sitewidth : 1366px;
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    margin-right:auto;
+    margin-left:auto;
+}
+
+/*見出しetc*/
+
+h2{
+    font-family : ヒラギノ角ゴ ProN;
+    font-size : 40px;
+    color : #FFFFFF;
+}
+
+h3{
+    font-family : ヒラギノ角ゴ ProN;
+    font-size : 36px;
+    letter-spacing : 0.72px;
+    color : #045F77;
+    color : rgb(4, 95, 119);
+}
+  
+h4{
+    font-family : ヒラギノ角ゴ ProN;
+    font-size : 18px;
+    color : #FFFFFF;
+    color : rgb(255, 255, 255);
+}
+
+h5{
+    font-family : ヒラギノ角ゴ ProN;
+    font-size : 25px;
+    color : #FFFFFF;
+}
+
+h6{
+    font-family : Helvetica;
+    font-size : 22px;
+    line-height : 29.11px;
+    letter-spacing : -0.44px;
+    color : #08B1BA;
+    color : rgb(8, 177, 186);
+}
+  
+.writing{
+    font-family : 小塚ゴシック ProN;
+    font-size : 17px;
+    line-height : 35.45px;
+    letter-spacing : 0.68px;
+    color : #333333;
+    color : rgb(51, 51, 51);
+}
+
+.button{
+    font-family : ヒラギノ丸ゴ ProN;
+    font-size : 20px;
+    letter-spacing : -0.4px;
+    color : #FFFFFF;
+    color : rgb(255, 255, 255);
+    display:block;
+    width: 395px;
+    text-align:center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color:#F45D5D;
+    border-radius: 5px;
+    box-shadow:0px 5px #DB4B4B;
+}
+
+
+/*内容*/
+
+.top-line{
+    height: 13px;
+    width: $sitewidth;
+    background-color: #1E5F68;
+}
+
+.title{
+    height: 635px;
+    width: $sitewidth;
+    background-image: url("/img/background-1.png");
+    h1{
+        position: relative;
+        top: 56px;
+        left: 165px;
+    }
+    p{
+        margin-top: 60px;
+        margin-left: 224px;
+        font-family : ヒラギノ丸ゴ ProN;
+        font-size : 23px;
+        line-height : 33.35px;
+        letter-spacing : 0.34px;
+        color : #FFFFFF;
+        color : rgb(255, 255, 255);
+        span{
+            font-family:  ヒラギノ丸ゴ ProN W4;
+            font-size: 19px;
+        }
+    }
+    .button{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 213px;
+    }
+}
+
+.main1{
+    height: 570px;
+    width: $sitewidth;
+    background-color: #DCF4F3;
+    .main1-l{
+       float: left;
+       h6{
+           margin-top: 86px;
+           margin-left: 183px;
+       }
+       h3{
+            margin-top: 26px;
+            margin-left: 165px;
+        }
+        p{
+            margin-top: 38px;
+            margin-left: 183px;
+        }
+        .button{
+            margin-top: 45px;
+            margin-left: 183px;  
+        }
+    }
+
+    .main1-r{
+        float: right;
+        margin-right: 184px;
+        margin-top: 120px;
+        h4{
+            width: 371px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            background-color: #045F77;
+            border-radius: 5px 5px 0px 0px;
+            text-align: center;
+        }
+        ul{
+            width: 371px;
+            height: 191px;
+            background-color: #FFFFFF;
+            border-radius: 0px 0px 5px 5px;
+            list-style:none;    
+            li{
+                background : url("/img/check-green.png") left no-repeat ;
+                background-position: 35px 20px;
+                text-indent:80px;
+                padding-top: 20px; 
+                font-family : ヒラギノ角ゴ ProN;
+                font-size : 16px;
+                line-height : 35.88px;
+                letter-spacing : 0.32px;
+                font-weight: 600;
+                color : #515151;
+                color : rgb(81, 81, 81);              
+            }
+
+        }
+    }
+}
+
+.main2{
+    height: 574px;
+    width: $sitewidth;
+    background-image: url("/img/background-2.png");
+    h6{
+        padding-top: 92px;
+        margin-left: 628px;
+    }
+    h3{
+        margin-top: 16px;
+        margin-left: 628px;
+    }
+    p{
+        margin-top: 40px;
+        margin-left: 628px;
+    }
+    .button{
+        margin-top: 48px;
+        margin-left: 628px;
+    }
+}
+
+.main3{
+    height: 587px;
+    width: $sitewidth;
+    background-color: #DCF4F3;   
+    h6{
+        padding-top: 95px;
+        margin-left: 183px;
+    }
+    h3{
+        margin-top: 26px;
+        margin-left: 183px;
+    }
+    p{
+        margin-top: 38px;
+        margin-left: 183px;  
+    }
+    .button{
+        margin-top: 45px;
+        margin-left: 183px;  
+    }
+}
+
+.event{
+    height: 1173px;
+    width: $sitewidth;
+    background-image: url("/img/background-3.png");
+
+    .event-h4{
+        height: 58px;
+        width: 438px;
+        background-color: #045F77;
+        border-radius: 5px 5px 0px 0px;
+        text-align: center; 
+    }       
+    img{
+        position: relative;
+        top:10px;
+    }                  
+    h4{
+        display:inline;
+    }
+
+    .event-top{
+        text-align: center;
+        padding-top: 131px;
+    }
+
+    .event-l{
+        margin-top: 84px;
+        float: left;
+        margin-left: $sitewidth / 2 - 438px -15px;
+        
+        dl{
+            width: 438px;
+            height: 494px;
+            background-color: #FFFFFF;
+            border-radius: 0px 0px 5px 5px;
+            dt{
+                font-family : ヒラギノ角ゴ ProN;
+                font-size : 16px;
+                src: local(HiraginoSans-W6);
+                font-weight: 700;
+                color : rgb(249, 250, 250);
+                color : #045f77;
+                float: left;
+                padding-left: 43px;
+            }      
+            dd{
+                font-family : 小塚ゴシック Pr6N;
+                font-size : 16px;
+                color : #333333;
+                color : rgb(51, 51, 51);
+                padding-left: 130px;
+            }
+            dt,dd{
+                padding-top: 28px;
+            }
+            
+        }
+    }
+
+    .event-r{
+        margin-top: 84px;
+        float: right;
+        margin-right: $sitewidth / 2 - 438px -15px;
+        
+
+        .r-list{
+            width: 438px;
+            height: 494px;
+            background-color: #FFFFFF;
+            border-radius: 0px 0px 5px 5px;
+            .name,.company{
+                text-align: center;             
+                font-family : 小塚ゴシック Pr6N;
+                line-height : 28px;
+                color : #333333;
+                color : rgb(51, 51, 51);
+            }
+            .name{
+                padding-top: 200px;
+                font-size : 20px;                
+            }
+            .company{
+                font-size : 16px;
+            }
+            ul{
+                font-family:  小塚ゴシック Pr6N R;
+                font-size: 15px;
+                list-style:none;
+                margin-top: 21px;
+                padding-left: 49px;
+                li{
+                    padding-bottom: 19px;
+                }
+            }
+        }
+    }
+
+    .event-bottom{
+        clear: both;
+        text-align: center;
+        .button{
+            display: inline-block;
+            margin-top: 86px;
+        }
+    }
+    
+}
+
+.under-line{
+    height: 51px;
+    width: $sitewidth;
+    background-color: #1E5F68;
+    text-align: center;
+    p{
+        font-family : Helvetica;
+        font-size : 14px;
+        line-height : 29.11px;
+        letter-spacing : -0.28px;
+        color : #FFFFFF;
+        color : rgb(255, 255, 255);
+        vertical-align: center;
+        padding-top: 10px;
+    }
+}
+
