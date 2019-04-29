@@ -4,13 +4,16 @@
 
 /*共通設定*/
 
+$title-font: ヒラギノ角ゴ ProN;
+$base-font: ヒラギノ丸ゴ ProN;
+
 *{
     margin: 0 auto
 }
 
-.button-big{
+.contact-send-button-big{
     display: inline-block;
-    font-family : ヒラギノ丸ゴ ProN;
+    font-family : $base-font;
     font-size : 20px;
     letter-spacing : -0.4px;
     color : #FFFFFF;
@@ -20,9 +23,9 @@
     box-shadow:0px 5px #DB4B4B;
 }
 
-.button{
+.contact-send-button{
     display: inline-block;
-    font-family : ヒラギノ丸ゴ ProN;
+    font-family : $base-font;
     font-size : 20px;
     letter-spacing : -0.4px;
     color : #FFFFFF;
@@ -33,7 +36,7 @@
 }
 
 .section-title{
-    font-family : ヒラギノ角ゴ ProN;
+    font-family : $title-font;
     font-size : 36px;
     letter-spacing : 0.72px;
     color : #045F77;
@@ -62,7 +65,7 @@
     width: 1366px;
 }
 
-main:before{
+.maincontents:before{
     content: "";
     display: block;
     height: 13px;
@@ -75,18 +78,18 @@ main:before{
     padding: 54px 160px;
     p{
         margin: 10px 0px 0px 53px;
-        font-family : ヒラギノ丸ゴ ProN;
+        font-family : $base-font;
         font-size : 23px;
         line-height : 33.35px;
         letter-spacing : 0.34px;
         color : #FFFFFF;
         span{
             margin: 7px;
-            font-family:  ヒラギノ丸ゴ ProN W4;
+            font-family:  $base-font W4;
             font-size: 19px;
         }
     }
-    .button-big{
+    .contact-send-button-big{
         margin-top: 48px;
         margin-left: 53px;
     }
@@ -120,7 +123,7 @@ main:before{
             background-color: white;
             border-radius: 7px;
             h2{
-                font-family : ヒラギノ角ゴ ProN;
+                font-family : $title-font;
                 font-size : 18px;
                 color : #FFFFFF;
                 color : rgb(255, 255, 255);
@@ -132,7 +135,7 @@ main:before{
             
             ul{
                 list-style: none;
-                font-family : ヒラギノ角ゴ ProN;
+                font-family : $title-font;
                 font-size : 16px;
                 letter-spacing : 0.32px;
                 color : #515151;
@@ -198,14 +201,14 @@ main:before{
         padding-top: 120px;
         padding-bottom: 77px;
         h2{
-            font-family : ヒラギノ角ゴ ProN;
+            font-family : $title-font;
             font-size : 25px;
             font-weight: normal;
             color : #FFFFFF;
             margin-bottom: 10px;
         }
         h3{
-            font-family : ヒラギノ角ゴ ProN;
+            font-family : $title-font;
             font-size : 40px;
             color : #FFFFFF;
         }
@@ -220,12 +223,12 @@ main:before{
             width: 446px;
             border-radius: 9px;
             background-color: white;
-            h2{
+            &__title{
                 text-align: center;
                 line-height: 62px;
                 border-radius: 9px 9px 0px 0px;
                 background-color: #045F77;
-                font-family : ヒラギノ角ゴ ProN;
+                font-family : $title-font;
                 font-size : 18px;
                 font-weight: normal;
                 color : #FFFFFF;
@@ -241,7 +244,7 @@ main:before{
             dl{ 
                 padding-top: 50px;
                 dt{
-                    font-family : ヒラギノ角ゴ ProN;
+                    font-family : $title-font;
                     font-size : 16px;
                     font-weight: 700;
                     color : #045f77;
@@ -280,7 +283,7 @@ main:before{
             line-height: 62px;
             border-radius: 9px 9px 0px 0px;
             background-color: #045F77;
-            font-family : ヒラギノ角ゴ ProN;
+            font-family : $title-font;
             font-size : 18px;
             font-weight: normal;
             color : #FFFFFF;
@@ -293,19 +296,25 @@ main:before{
             left: 100px;
         }
 
-        .name,.company{
+
+        %closing-r-font {
             text-align: center;             
             font-family : 小塚ゴシック Pr6N;
             line-height : 28px;
             color : #333333;
-        }
-        .name{
-            margin-top: 200px;
-            font-size : 20px;                
-        }
-        .company{
-            font-size : 16px;
-            margin-bottom: 15px;
+            }
+
+        .closing-r{
+            &__name{
+                @extend %closing-r-font;
+                margin-top: 200px;
+                font-size : 20px;                
+            }
+            &__company{
+                @extend %closing-r-font;
+                font-size : 16px;
+                margin-bottom: 15px;
+            }
         }
 
         ul{
