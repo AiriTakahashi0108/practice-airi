@@ -1,0 +1,567 @@
+@charset "UTF-8";
+
+*{
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+a, a:visited{
+    text-decoration: none;
+    color: none;
+}
+
+
+
+// 関数設定
+
+//font
+$base-font : Noto Sans CJK JP;
+$btn-font : 小塚ゴシック Pr6N;
+
+//color
+$pink : #FF5263;
+$black : #333333;
+
+//size
+$side : 10%;
+
+// include
+
+%__sub-title{
+    font-family : Poppins;
+    font-weight : bold;
+    font-size : 19px;
+    line-height : 32px;
+    letter-spacing : 1.14px;
+    color : $pink;
+    &:before{
+        content: url(/assets/image/section_title-iconL.png);
+        display: inline-block;
+        padding-right: 14px;
+    }
+    &:after{
+        content: url(/assets/image/section_title-iconR.png);
+        display: inline-block;
+        padding-left: 14px;
+    }
+}
+
+%__now-btn{
+    margin-top: 30px;
+    background-color: white;
+    border: 10px solid rgba(255, 166, 166, 0.4);
+    border-radius: 50px;
+    width: 300px;
+    height: 95px;
+    text-align: center;
+    position: relative;
+    clear: both;
+    float: left;
+}
+
+%__now-link{
+    font-family: $btn-font;
+    font-size : 17px;
+    font-weight: bold;
+    letter-spacing : 1.36px;
+    line-height: 78px;
+    color: $pink;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    &:after{
+        margin-left: 7px;
+        content:'\f305';
+        font-family:'Font Awesome 5 Free';
+        font-weight: 900;
+    }
+}
+
+//設定ここまで
+
+.header{
+    width: 100%;
+    height: 120px;
+    z-index: 5;
+    background : linear-gradient(114.55deg, rgba(255, 70, 100, 1) 0.09%, rgba(255, 73, 100, 1) 2.98%, rgba(255, 138, 96, 1) 68.91%, rgba(255, 163, 95, 1) 100%);
+    box-shadow : 0px 2px 5px rgba(40, 0, 0, 0.2);
+    position: fixed;
+    
+    &__logo{
+        position: absolute;
+        width: 180px;
+        float: left;
+        margin-top: 45px;
+        margin-left: 57px;
+    }
+    
+    &__btn{
+        float: right;
+        margin-right: 37px;
+        margin-top: 10px;
+        @extend %__now-btn
+    }
+    
+    &__link{
+        @extend %__now-link
+    }
+}
+
+.wrap{
+    max-width: 1400px;
+}
+
+.main-visual-container{
+    background-image: url(/assets/image/back_ground_01.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 910px;
+}
+
+.main-visual{
+    padding: 169px $side 0px $side;
+
+    &__txt{
+        font-family: $base-font;
+        font-size : 22px;
+        font-weight: bold;
+        line-height : 38.75px;
+        letter-spacing : 0.88px;
+        color: white;
+        margin-top: 26px;
+    }
+
+    &__balloon{
+        font-family: $base-font;
+        color: white;
+        font-size : 16px;
+        background : linear-gradient(90deg, rgba(255, 131, 10, 1) 0%, rgba(255, 180, 70, 1) 100%);  
+        padding: 20px 17px;
+        border-radius: 8px;
+        width: 407px;
+        text-align: center;
+        margin-top: 86px;
+        float: left;
+        position: relative;
+        &:before{
+            content: '';
+            position: absolute;
+            display: block;
+            width: 0;
+            height: 0;
+            left: 70px;
+            bottom: -20px;
+            border-top: 20px solid rgba(255, 131, 10, 1);
+            border-right: 18px solid transparent;
+            border-left: 5px solid transparent;
+          }
+    }
+
+    &__btn{
+        @extend %__now-btn
+    }
+    
+    &__link{
+        @extend %__now-link
+    }
+}
+
+.OUR_MISSION-container{
+    width: 100%;
+    height: 1000px;
+    background-color: white;
+}
+
+.OUR_MISSION{
+    padding: 78px $side 78px $side;
+    text-align: center;
+
+    &__sub-title{
+        @extend %__sub-title;
+    }
+
+    &__title{
+        font-family : $base-font;
+        font-weight: bold;
+        font-size : 34px;
+        line-height : 47.5px;
+        letter-spacing : 0.68px;
+        color : $black;
+        margin-top: 40px;
+    }
+
+    &__txt{
+        font-family : $base-font;
+        font-weight: medium;
+        font-size : 17px;
+        line-height : 46px;
+        color :  $black; 
+        margin-top: 75px;     
+    }
+}
+
+.OM-contents-container{
+    padding-top: 75px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.OM-contents{
+    position: relative;
+    margin-top: 240px;
+    
+    &__img{
+        position: absolute;
+        bottom: 90px;
+        left: 0px;
+        right: 0px;
+        margin: auto;
+    }
+
+    &__txt{
+        font-family : $base-font;
+        font-weight : bold;
+        font-size : 17px;
+        line-height : 30px;
+        letter-spacing : 0.34px;
+        color : $black;
+        text-align: left;
+    }
+}
+
+.Reward-container{
+    background-image: url(/assets/image/back_ground_03.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1218px;
+}
+
+.Reward{
+    padding: 280px $side 0px $side;
+
+    &__sub-title{
+        font-family : $base-font;
+        font-weight: bold;
+        font-size : 20px;
+        line-height : 43.5px;
+        letter-spacing : 0.4px;
+        color : white;
+    }
+
+    &__title{
+        font-family : $base-font;
+        font-weight : bold;
+        font-size : 34px;
+        line-height : 43.5px;
+        letter-spacing : 0.68px;
+        color : white;
+        margin-top: 15px; 
+    }
+
+    .Reward-contents-container{
+        padding-top: 78px;
+        display: flex;
+        flex-wrap: wrap;
+        float: left;
+        
+        .Reward-contents{
+            width: 33%;
+            padding-right: 8%;
+            display: inline-block;
+            margin-bottom: 38px;
+
+            &__title{
+                font-family : $base-font;
+                font-weight: bold;
+                font-size : 17px;
+                line-height : 43.5px;
+                letter-spacing : 0.34px;
+                color : white; 
+                margin-top: 8px;                
+            }
+
+            &__txt{
+                font-family : $base-font;
+                font-weight: medium;
+                font-size : 14px;
+                line-height : 27.5px;
+                letter-spacing : 0.28px;
+                color : white;
+                margin-top: 8px;                
+            }
+        }
+    }
+}
+
+.TO_THE_WORLD-container{
+    width: 100%;
+    height: 760px;
+    background-color: white;
+}
+
+.TO_THE_WORLD{
+    padding: 78px $side 78px $side;
+    text-align: center;
+
+    &__sub-title{
+        @extend %__sub-title;
+    }
+
+    &__title{
+       font-family : $base-font;
+       font-weight: bold;
+       font-size : 34px;
+       line-height : 47.5px;
+       letter-spacing : 0.68px;
+       color : $black;
+       margin-top: 40px;
+    }
+}
+
+.TTW-contents-container{
+    padding-top: 85px;
+    display: flex;
+    justify-content : space-around;
+}
+
+.TTW-contents{
+    margin: 0 auto;
+    width: 50%;
+    max-width: 500px;
+    padding-right: 5%;
+    padding-left: 5%;
+
+    &__title{
+        font-family : $base-font;
+        font-weight: bold;
+        font-size : 20px;
+        line-height : 47.5px;
+        letter-spacing : 0.4px;
+        color : $black;
+    }
+
+    &__txt{
+        font-family : $base-font;
+        font-weight: medium;
+        line-height : 36px;
+        letter-spacing : -1.2px;
+        color : $black;
+        margin-top: 7px;
+    }
+}  
+
+.Tech_company-container{
+    background-image: url(/assets/image/back_ground_05.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1037px;
+}
+
+.Tech_company{
+    padding: 271px $side 0px $side;
+    display: flex;
+
+    &__l{
+        width: 558px;
+        margin-right: 10%;
+
+        &__title{ 
+            font-family : $base-font;
+            font-weight: bold;
+            font-size : 28px;
+            line-height : 45.5px;
+            letter-spacing : 1.2px;
+            color : $black;
+        }
+
+        &__txt{
+            font-family : $base-font;
+            font-weight: bold;
+            font-size : 15px;
+            line-height : 40px;
+            color : $black;
+            margin-top: 40px;
+        }
+    }
+}
+
+.Tc-contents{
+    margin-bottom: 96px;
+
+    &__img{
+        float: left;
+        padding-right: 35px;
+    }
+
+    &__txt-box{
+        display: inline-block;
+        width: 70%;
+    }
+
+    &__title{
+        font-family : $base-font;
+        font-weight: bold;
+        font-size : 18px;
+        line-height : 32px;
+        color : $black;
+    }
+
+    &__txt{
+        font-family : $base-font;
+        font-weight: medium;
+        font-size : 15px;
+        line-height : 26px;
+        color :$black;
+        margin-top: 8px;
+    }
+}
+
+.PRODUCK_RELEASE-container{
+    width: 100%;
+    height: 823px;
+    background-color: white;
+    position: relative;
+    &:before{
+        content: url(/assets/image/PRODUCK_RELEASE.png);
+        position: absolute;
+        top: 260px;
+        left: 660px;
+    }
+}
+
+.PRODUCK_RELEASE{
+    padding: 78px $side 78px $side;
+    position: absolute;
+    z-index: inherit;
+    width: 100%;
+
+    &__sub-title{
+        @extend %__sub-title;
+        text-align: center;
+    }
+
+    &__title{
+       font-family : $base-font;
+       font-weight: bold;
+       font-size : 34px;
+       line-height : 47.5px;
+       letter-spacing : 0.68px;
+       color : $black;
+       margin-top: 40px;
+       text-align: center;
+       margin-bottom: 100px;
+    }
+
+    &__day{
+        font-family : $base-font;
+        font-weight: bold;
+        font-size : 23px;
+        line-height : 46px;
+        color : $black;
+
+        .smallsize{
+            font-family : $base-font;
+            font-weight: bold;
+            font-size : 16px;
+        }
+    }
+
+    &__txt{
+        font-family : $base-font;
+        font-weight: medium;
+        font-size : 15px;
+        line-height : 40px;
+        color : $black;
+        width: 457px;
+        float: left;
+        margin-top: 47px;
+
+    }
+
+    &__btn{
+        margin-top: 47px;
+        clear: both;
+        border: 10px solid rgba(255, 255, 255, 0.6);
+        background-color: #ff6263;
+        border-radius: 50px;
+        width: 291px;
+        height: 68px;
+        position: relative;
+        float: left;
+    }
+    
+    &__link{
+        font-family : $btn-font;
+        font-size : 14px;
+        font-weight: bold;
+        color: white;
+        position: absolute;
+        text-align: center;
+        line-height: 49px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        &:before{
+            content: url(/assets/image/cat-icon.png);
+            display: inline-block;
+            padding-right:10px;
+        }
+    }
+}
+
+.OFFICIAL_PARTNERS-container{
+    background-image: url(/assets/image/back_ground_07.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 764px;
+}
+
+.OFFICIAL_PARTNERS{
+    padding: 271px $side 0px $side;
+    text-align: center;
+
+    &__title{
+        font-family : Poppins;
+        font-weight : bold;
+        font-size : 19px;
+        line-height : 46px;
+        letter-spacing : 1.14px;
+        color : $pink;
+        border : 2px solid $pink;
+        border-radius: 8px;
+        width: 270px;
+    }
+
+    &__list{
+        width: 748px;
+        padding-top: 78px;
+        display:  flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__link{
+        display: inline-block;
+        line-height: 70px;
+        width:33%;
+        margin-bottom: 20px;
+    }
+}    
+
+.footer{
+    height: 67px;
+    text-align: center;
+    background-color: $black;
+}
+
+.copyright{
+    line-height: 67px;
+    font-family : PT Sans;
+    font-weight : bold;
+    font-size : 13px;
+    color: white;
+    letter-spacing : 0.78px;
+}
