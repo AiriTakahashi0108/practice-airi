@@ -16,6 +16,7 @@ a, a:visited{
 //font
 $base-font : Noto Sans CJK JP;
 $btn-font : 小塚ゴシック Pr6N;
+$sub-ttl : Poppins;
 
 //color
 $pink : #FF5263;
@@ -28,7 +29,7 @@ $media2 : 768px;
 // include
 
 %__sub-title{
-    font-family : Poppins;
+    font-family : $sub-ttl;
     font-weight : 500;
     font-size : 19px;
     line-height : 32px;
@@ -87,6 +88,7 @@ $media2 : 768px;
 }
 
 .menu{
+    display: none;
     width: 100%;
     height: 120px;
     z-index: 5;
@@ -97,13 +99,11 @@ $media2 : 768px;
     &__logo{
         position: absolute;
         width: 180px;
-        float: left;
         margin-top: 45px;
         margin-left: 57px;
     }
     
     &__btn{
-        float: right;
         margin-right: 37px;
         margin-top: 10px;
         @extend %__now-btn;
@@ -133,26 +133,39 @@ $media2 : 768px;
 
 .main-visual{
     background-image: url(/assets/image/back_ground_01.png);
-    background-size: cover;
     background-repeat: no-repeat;
-    height: 910px;
-    position: relative;
-    overflow: hidden;     
+    background-size: cover; 
+    height: 790px;
+    overflow: hidden;
+
+    @media screen and (min-width: 1100px){
+        background-size: 100% 790px;
+    }
+
+    &__layer{
+        background: url(/assets/image/back-layer.png);
+        background-size: cover;
+    }
 
     &__inner{
-        padding-top: 169px;
-        padding-left: 10%;
-        max-width: 100%;
-        width: 100%;
+        display: flex;
+        align-items: center;
+        min-width: 1200px;
+        height: 750px;
         @media screen and (max-width: $media1){
             text-align: center;
-            padding-left:0;
+            min-width:0;
         }
+    }
 
+    &__l{
+        @media screen and (max-width: $media1){
+            margin-top: -70px;
+        }
     }
 
     &__logo{
-        width: 316px;
+        width: 310px;
         margin-left: 0;
         @media screen and (max-width: $media1){
             width: 250px;
@@ -163,14 +176,14 @@ $media2 : 768px;
 
     &__txt{
         font-family: $base-font;
-        font-size : 22px;
+        font-size : 19px;
         font-weight: bold;
-        line-height : 38.75px;
+        line-height : 35px;
         letter-spacing : 0.88px;
         color: white;
-        margin-top: 26px;
         @media screen and (max-width: $media1){
             font-size : 17px;
+            margin-top: 20px;
         }
     }
 
@@ -184,8 +197,9 @@ $media2 : 768px;
         width: 407px;
         text-align: center;
         margin-top: 86px;
-        float: left;
         position: relative;
+        display: none;
+
         &:before{
             content: '';
             position: absolute;
@@ -206,7 +220,7 @@ $media2 : 768px;
     &__btn{
         @extend %__now-btn;
         margin-left:0;
-        margin-top: 175px;
+        margin-top: 40px;
         &:hover{
             opacity: 0.8;
         }
@@ -227,18 +241,18 @@ $media2 : 768px;
     }
 
     &__img{
-        width: 667px;
-        height: auto;
-        position: absolute;
-        top: 80px;
-        left: 650px; 
-        overflow: hidden;     
+        width: 550px;
+        height: 550px;
+        overflow: hidden;  
+        @media screen and (max-width: $media1){
+            display: none;
+        }   
        
         &--sp{
             display: none;
             @media screen and (max-width: $media1){
                 display: block;
-                width: 250px;
+                width: 230px;
                 height: auto;
             }
         }
@@ -337,6 +351,9 @@ $media2 : 768px;
     background-repeat: no-repeat;
     background-position: center;
     overflow: hidden;
+    @media screen and (min-width: 1400px){
+        background-size: 100% 1270px;
+    }
 
     &__inner{
         padding: 286px 0 250px 0;
@@ -520,6 +537,9 @@ $media2 : 768px;
     background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;
+    @media screen and (min-width: 1400px){
+        background-size: 100% 1046px;
+    }
 
     &__inner{
         padding: 270px 0 230px 0;
@@ -757,6 +777,9 @@ $media2 : 768px;
     background-repeat: no-repeat;
     background-position: center;
     overflow: hidden;
+    @media screen and (min-width: 1400px){
+        background-size: 100% 715px;
+    }
 
     &__inner{
         padding-top: 300px;
@@ -769,7 +792,7 @@ $media2 : 768px;
     }
 
     &__title{
-        font-family : Poppins;
+        font-family : $sub-ttl;
         font-weight : bold;
         font-size : 19px;
         line-height : 46px;
